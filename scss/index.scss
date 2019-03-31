@@ -1,0 +1,97 @@
+@import '_reset.scss';
+@import '_variables.scss';
+
+// Main Container
+.container {
+    display: grid;
+    grid-auto-columns: minmax(320px, auto);
+    grid-auto-rows: minmax(40px, auto);
+    grid-template-areas:
+        "header"
+        "nav"
+        "main";
+}
+
+// Header Styles
+header {
+    grid-area: header;
+    background-color: rgba(110, 88, 211, 0.774);
+}
+
+.flex-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 10px;
+    
+}
+
+.bell-icon {
+    max-width: 25px;
+    height: 15px;
+    border-right: solid rgba(46, 32, 107, 0.705) 1px;
+    padding-right: 15px;
+    margin-right: 10px;
+}
+
+.flex-avatar {
+    display: flex;
+    align-items: center;
+    max-height: 25px;
+}
+
+.avatar-img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;  
+}
+
+.avatar-span {
+    font-size: 10px;
+}
+
+
+// Navigation Styles
+nav {
+    grid-area: nav;
+    background-color: rgba(20, 3, 80, 0.76);
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-around;
+}
+// Dashboard Icon
+.nav-icons {
+    max-width: 25px;
+    max-height: 20px;
+    align-self: center;
+}
+
+
+//////////////////////// MAIN CONTENT //////////////////////
+
+.maincontent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    "line"
+    "bar"
+    "dough";
+}
+
+#lineChart {
+    grid-area: line;
+}
+
+#barChart {
+    grid-area: bar;
+ 
+}
+
+#doughtnutChart {
+    grid-area: dough;
+}
+
