@@ -1,6 +1,10 @@
 @import '_reset.scss';
 @import '_variables.scss';
 
+h4 {
+    margin: 0;
+}
+
 // Main Container
 .container {
     display: grid;
@@ -71,8 +75,24 @@ nav {
 
 
 //////////////////////// MAIN CONTENT //////////////////////
+.dash-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dash-text {
+    padding: 10px;
+}
+
+.search-div {
+    border: 1px solid rgba(0, 0, 0, 0.205);
+    border-radius: 3px;
+    align-self: center;
+}
+
 
 .maincontent {
+    grid-area: main;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -88,10 +108,49 @@ nav {
 
 #barChart {
     grid-area: bar;
- 
+    border: 1px rgba(0, 0, 0, 0.200) solid;
 }
 
 #doughtnutChart {
     grid-area: dough;
+    border: 1px rgba(0, 0, 0, 0.205) solid;
 }
 
+.card-social {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: minmax(25px, 1fr);
+    grid-gap: 10px;
+    justify-items: center;
+    grid-template-areas:
+    "social social social"
+    "twitter facebook google"
+    ". . ."
+}
+.social-icon {
+    max-width: 30px;
+}
+.card-header {
+    display: flex;
+    justify-self: left;
+    margin: 10px;
+}
+.card-twitter {
+    grid-area: twitter;
+    width: 50px;
+}
+.card-facebook {
+    grid-area: facebook;
+    width: 50px;
+}
+.card-google {
+    grid-area: google;
+    width: 50px;
+}
+
+#card {
+    background-color: lightgrey;
+    width: 100%;
+    display:flex;
+    border: 1px solid #999;
+}

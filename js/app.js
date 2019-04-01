@@ -104,7 +104,7 @@ new Chart(document.getElementById("doughtnutChart"), {
         {
           label: "Population (millions)",
           backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f"],
-          data: []
+          data: [11000,11000,45500]
         }
       ]
     },

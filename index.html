@@ -33,13 +33,51 @@
             <input class="nav-icons" type="image" src="icons/icon-visits.svg" alt="Nav Visitors Button"/> 
             <input class="nav-icons" type="image" src="icons/icon-settings.svg" alt="Nav Settings Button"/>
         </nav>
-         <!-- Grid Item -->
+        <div class="dash-div">
+            <div class="dash-text">
+                <h4>Dashboard</h4>
+            </div>
+            <div class="search-div">
+             <input type="text" id="search" placeholder=" Search">
+            </div>
+        </div>
             <main class="mainContent">
                 <canvas id="lineChart"></canvas>
                 <canvas id="barChart"></canvas>
                 <canvas id="doughtnutChart"></canvas>   
             </main>
+
+            <div class="card-social">
+                <div class="card-header">
+                <h5>Social Stats</h5>
+                </div>
+                <article id="card" class="card-twitter">
+                    <img class="social-icon" src="icons/icon-twitter.svg" alt="Twitter Icon">
+                    <h5>Twitter</h5>
+                    <p class="numbers">10,345</p>
+                </article>
+                <article id="card" class="card-facebook">
+                    <img class="social-icon" src="icons/icon-facebook.svg" alt="Facebook Icon">
+                    <h5>Facebook</h5>
+                    <p class="numbers">8,739</p>
+
+                </article>
+                <article id="card" class="card-google">
+                    <img class="social-icon" src="icons/icon-google-plus.svg" alt="Google Icon">
+                    <h5>Google+</h5>
+                    <p class="numbers">2,530</p>
+                </article>
+            </div>
    </div>
+
+
+
+
+
+
+
+
+
    
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
