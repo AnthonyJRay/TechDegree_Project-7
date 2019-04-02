@@ -1,16 +1,48 @@
-const msgBox = document.querySelector(".msgBox")
-const close = document.getElementById("close")
+const msgBox = document.querySelector(".msgBox");
+const close = document.getElementById("close");
+// const stats = document.getElementById('stats').innerHTML;
+const dashboard = document.getElementById('dashboard');
+const members = document.getElementById('members');
+const visitors = document.getElementById('visitors');
+const settings = document.getElementById('settings');
+const navIcons = document.getElementsByClassName('nav-icons');
+const searchBar = document.getElementById('searchBar');
 
+document.addEventListener('click', function (e) {
+  if ( e.target.classList.contains('nav-icons')) {
+      e.target.style.borderLeft = "1px solid #000";
+  }
+}, false);
+
+// SEARCH BAR FUNCTION //
+function active(){
+    if(searchBar.value == 'Search...'){
+      searchBar.value = ''
+      searchBar.placeholder = 'Search...'
+    }
+  }
+  function inactive(){
+    const searchBar = document.getElementById('searchBar');
+
+    if(searchBar.value == ''){
+      searchBar.value = 'Search...'
+      searchBar.placeholder = ''
+    }
+  }
+
+// TABS FUNCTION //
 $( function() {
   $( "#tabs" ).tabs({
     collapsible: true
   });
 } );
 
+// ALERT BOX EVENT LISTENER //
 close.addEventListener("click", ()=> {
 	msgBox.style.display = "none";
 	})
 
+// CHART.js LINE CHART //
 new Chart(document.getElementById("lineChart"), {
     type: 'line',
     data: {
@@ -54,7 +86,7 @@ new Chart(document.getElementById("lineChart"), {
     }
   });
 
-// Bar Chart
+// CHART.js BAR CHART //
 new Chart(document.getElementById("barChart"), {
     type: 'bar',
     data: {
@@ -93,7 +125,7 @@ new Chart(document.getElementById("barChart"), {
         }
     }
 });
-
+// CHART.js DOUGHTNUT CHART //
 new Chart(document.getElementById("doughtnutChart"), {
     type: 'doughnut',
     data: {
@@ -113,5 +145,3 @@ new Chart(document.getElementById("doughtnutChart"), {
       }
     }
 });
-
-const stats = document.getElementById('stats')

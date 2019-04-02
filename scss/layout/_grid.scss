@@ -1,14 +1,11 @@
 // BASE LAYOUT
 .container {
-    @include grid-one;
-    grid-template-areas:
+  @include grid-one;
+  grid-template-areas:
     "one"
     "two"
     "three"
     "tab1"
-    // "chart"
-    // "bar"
-    // "dough"
     "card"
     "twitter"
     "facebook"
@@ -22,59 +19,37 @@
     @include med {
         @include grid-two;
         grid-template-areas:
-        "one one"
-        "two three"
-        "two tab1"
-        // "two chart"
-        // "two bar"
-        // "two dough"
-        "two card"
-        "two chat"
-        "two members"
-        "two activity"
-        "two user"
-        "two settings"
+            "one one"
+            "two three"
+            "two tab1"
+            "two card"
+            "two chat"
+            "two members"
+            "two activity"
+            "two user"
+            "two settings"
     }
-    @include lrg {
-        @include grid-five;
-        grid-template-areas:
-        "one one one one one"
-        "two three three three three"
-        "two tab1 tab1 tab1 tab1"
-        // "two tab1 tab1 tab1 tab1"
-        // "two chart chart chart chart"
-        // "two bar bar dough dough"
-        "two card card card card"
-        "two chat chat chat chat"
-        "two members members activity activity"
-        "two user user settings settings"
-        
-    }
-    .tabs {
-        // grid-template-areas:
-        // "chart"
-        // "bar"
-        // "dough";
         @include lrg {
-            @include grid-tab;
-        grid-template-areas:
-        "chart chart chart chart"
-        "bar bar dough dough"
-    }
-    }
-}
+            @include grid-five;
+            grid-template-areas:
+            "one one one one one"
+            "two three three three three"
+            "two tab1 tab1 tab1 tab1"
+            "two card card card card"
+            "two chat chat chat chat"
+            "two members members activity activity"
+            "two user user settings settings"
+        }
 
-    .two {
-        @include med {
-        flex-direction: column;
-    }
-}
-
-.chart,
-.bar,
-.dough {
-    margin: 10px;
-}
+        .tabs {
+            @include lrg {
+                @include grid-tab;
+                grid-template-areas:
+                "chart chart chart chart"
+                "bar bar dough dough"
+            }
+        }
+    
 
     .card {
         @include med {
@@ -96,21 +71,11 @@
     @include lrg {
         width: 90%;
     }
+    }
+    .two {
+        @include med {
+            flex-direction: column;
+            justify-content: initial;
+        }
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

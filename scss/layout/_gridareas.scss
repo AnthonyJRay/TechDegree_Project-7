@@ -8,9 +8,10 @@
 }
 .two {
     grid-area: two;
-    display: flex;
-    align-items: center;
     background-color: rgba(40, 29, 88, 0.863);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 .three {
     grid-area: three;
@@ -67,4 +68,10 @@
 .settings {
     grid-area: settings;
     background-color: slategrey;
+}
+
+.chart,
+.bar,
+.dough {
+    margin: 10px;
 }
