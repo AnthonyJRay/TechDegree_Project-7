@@ -1,0 +1,21 @@
+.msgBox {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    background-color:rgba(86, 79, 192, 0.842);
+    border-radius: 5px;
+    max-width: 95%;
+    margin: auto;
+}
+#close {
+    margin-right: 10px;
+}
+
+#tabs {
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    font-family: FontAwesome;
+}

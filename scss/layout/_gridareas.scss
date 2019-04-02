@@ -1,0 +1,70 @@
+/* New Nest */
+.one {
+    grid-area: one;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(86, 79, 192, 0.842);
+}
+.two {
+    grid-area: two;
+    display: flex;
+    align-items: center;
+    background-color: rgba(40, 29, 88, 0.863);
+}
+.three {
+    grid-area: three;
+}
+.tabs {
+    grid-area: tab1;
+}
+/* New Nest */
+.chart {
+    grid-area: chart;
+}
+.bar {
+    grid-area: bar;
+
+}.dough {
+    grid-area: dough;
+
+}
+/* New Nest */
+.card {
+    grid-area: card;
+
+}
+.twitter {
+    grid-area: twitter;
+    background-color: lightblue;   
+}
+.facebook {
+    grid-area: facebook;
+    background-color: slategrey;
+}
+.google {
+    grid-area: google;
+    background-color: lightblue;
+}
+
+/* New Nest */
+.chat {
+    grid-area: chat;
+    background-color: slategrey;
+}
+.members {
+    grid-area: members;
+    background-color: lightblue;
+}
+.activity {
+    grid-area: activity;
+    background-color: slategrey;
+}
+.user {
+    grid-area: user;
+    background-color: lightblue;  
+}
+.settings {
+    grid-area: settings;
+    background-color: slategrey;
+}

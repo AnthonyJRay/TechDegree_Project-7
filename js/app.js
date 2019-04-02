@@ -1,18 +1,16 @@
-const dashboardContent = document.getElementsByTagName('main')
-const dashboardIcon = document.getElementById('dashboardIcon');
+const msgBox = document.querySelector(".msgBox")
+const close = document.getElementById("close")
 
-$(document).ready(function() {
-  $("#dashboardIcon").click(function () {
-  $(".mainContent").toggle()
+$( function() {
+  $( "#tabs" ).tabs({
+    collapsible: true
   });
-  });
+} );
 
+close.addEventListener("click", ()=> {
+	msgBox.style.display = "none";
+	})
 
-
-
-
-
-// Line Chart
 new Chart(document.getElementById("lineChart"), {
     type: 'line',
     data: {
@@ -65,22 +63,22 @@ new Chart(document.getElementById("barChart"), {
             label: 'DAILY TRAFFIC',
             data: [75, 100, 175, 125, 225, 200, 100],
             backgroundColor: [
-                'rgba(46, 32, 107, 0.900)',
-                'rgba(46, 32, 107, 0.900)',
-                'rgba(46, 32, 107, 0.905)',
-                'rgba(46, 32, 107, 0.905)',
-                'rgba(46, 32, 107, 0.905)',
-                'rgba(46, 32, 107, 0.905)',
-                'rgba(46, 32, 107, 0.905)'
+                'rgba(86, 79, 192, 0.842)',
+                'rgba(86, 79, 192, 0.842)',
+                'rgba(86, 79, 192, 0.842)',
+                'rgba(86, 79, 192, 0.842)',
+                'rgba(86, 79, 192, 0.842)',
+                'rgba(86, 79, 192, 0.842)',
+                'rgba(86, 79, 192, 0.842)'
             ],
             borderColor: [
-                'rgba(46, 32, 107, 0.905)',
-                'rgba(46, 32, 107, 0.905)',
-                'rgba(46, 32, 107, 0.905)',
-                'rgba(46, 32, 107, 0.905)',
-                'rgba(46, 32, 107, 0.905)',
-                'rgba(46, 32, 107, 0.905)',
-                'rgba(46, 32, 107, 0.905)'
+                'rgba(86, 79, 192, 0.842)',
+                'rgba(86, 79, 192, 0.842)',
+                'rgba(86, 79, 192, 0.842)',
+                'rgba(86, 79, 192, 0.842)',
+                'rgba(86, 79, 192, 0.842)',
+                'rgba(86, 79, 192, 0.842)',
+                'rgba(86, 79, 192, 0.842)'
             ],
             borderWidth: 1
         }]
@@ -116,3 +114,4 @@ new Chart(document.getElementById("doughtnutChart"), {
     }
 });
 
+const stats = document.getElementById('stats')

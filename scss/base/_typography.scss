@@ -1,0 +1,30 @@
+.header-title,
+.avatar-name {
+    margin: 0 5px;
+    color: rgba(240, 238, 238, 0.89);
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-family: Helvetica, sans-serif;
+    &.message {
+        font-family: Helvetica, sans-serif;
+        margin: 10px 20px;
+    }
+}
+
+.social-stats {
+    font-size: 2.5em;
+    color: #555;
+    margin: 0;
+}
+
+.social-header {
+
+}
+
+input[type="submit"] {
+    font-family: "Font Awesome 5 Free"; // for the open access version
+    font-size: 1.3333333333333333em;
+    font-weight: 900;
+}

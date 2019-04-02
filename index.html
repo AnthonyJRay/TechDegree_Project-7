@@ -4,83 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
-    <title>WebApp Dashboard</title>
 </head>
 <body>
-    <!-- Parent Grid Container -->
-   <div class="container">
-       <!-- Grid Item -->
-        <header class="main-header">
 
-            <div class="flex-header">
-                <div class="flex-app">
-                    <strong>Web</strong>App	&trade;
+    <!-- Header/Avatar -->
+
+<div class="container">
+    <div class="one">
+        <p class="header-title"><strong>Web</strong>App&trade;</p>
+        
+        <div class="avatar-div">
+            <img class="bell-icon" src="icons/icon-bell.svg" alt="Bell Notification Icon">
+            <img class="avatar-img" src="images/avatar-img.jpg" alt="Avatar Image">
+            <span class="avatar-name">Anthony Eriksen</span>
+        </div>    
+    </div>
+    <!-- Navigation Bar -->
+    <nav class="two">
+        <img class="nav-icons" src="icons/icon-dashboard.svg" alt="Dashboard Icon">
+        <img class="nav-icons" src="icons/icon-members.svg" alt="Members Icon">
+        <img class="nav-icons" src="icons/icon-visits.svg" alt="Visitors Icon">
+        <img class="nav-icons" src="icons/icon-settings.svg" alt="Settings Icon">
+    </nav>
+
+    
+    <div class="three">
+            <div class="ui-tabs" id="tabs">
+                    <ul>
+                      <li><a href="#tabs-1">Dashboard</a></li>
+                      <input type="submit" id="search" value="&#xf002" placeholder=" Search">
+                    </ul>
+            </div>
+
+            <div class="msgBox">
+                    <p class="message"><span class="alert">Alert!</span>
+                        Welcome back, You have unread notifications!
+                    </p>
+                    <span class="fas fa-times-circle" id="close"></span>
                 </div> 
-                
-                <div class="flex-avatar">
-                    <img class="bell-icon" src="icons/icon-bell.svg" alt="Notification Icon">
-                    <img class="avatar-img" src="images/avatar-img.jpg" alt="Avatar Image">
-                    <span class="avatar-span">Anthony Eriksen</span>
-                </div>
-            </div>
-        </header>
-
-        <!-- Grid Item -->
-        <nav class="main-nav">
-            <input id="dashboardIcon" class="nav-icons" type="image" src="icons/icon-dashboard.svg" alt="Nav Dashboard Button"/>
-            <input class="nav-icons" type="image" src="icons/icon-members.svg" alt="Nav Members Button"/>
-            <input class="nav-icons" type="image" src="icons/icon-visits.svg" alt="Nav Visitors Button"/> 
-            <input class="nav-icons" type="image" src="icons/icon-settings.svg" alt="Nav Settings Button"/>
-        </nav>
-        <div class="dash-div">
-            <div class="dash-text">
-                <h4>Dashboard</h4>
-            </div>
-            <div class="search-div">
-             <input type="text" id="search" placeholder=" Search">
-            </div>
+     </div>
+                    
+    <div class="tabs" id="tabs-1">
+        <div class="chart">
+            <canvas id="lineChart"></canvas>
         </div>
-            <main class="mainContent">
-                <canvas id="lineChart"></canvas>
-                <canvas id="barChart"></canvas>
-                <canvas id="doughtnutChart"></canvas>   
-            </main>
+        <div class="bar">
+            <canvas id="barChart"></canvas>
+        </div>
+        <div class="dough">
+            <canvas id="doughtnutChart"></canvas>
+        </div>
+    </div>
+    
 
-            <div class="card-social">
-                <div class="card-header">
-                <h5>Social Stats</h5>
+    <div class="card">
+        <div class="social">
+            <img class="social-icons" src="icons/icon-twitter.svg" alt="">
+                <div class="google-content"> 
+                    <p class="social-header">Twitter</p>
+                    <p class="social-stats" id="stats">10,345</p>
                 </div>
-                <article id="card" class="card-twitter">
-                    <img class="social-icon" src="icons/icon-twitter.svg" alt="Twitter Icon">
-                    <h5>Twitter</h5>
-                    <p class="numbers">10,345</p>
-                </article>
-                <article id="card" class="card-facebook">
-                    <img class="social-icon" src="icons/icon-facebook.svg" alt="Facebook Icon">
-                    <h5>Facebook</h5>
-                    <p class="numbers">8,739</p>
+        </div>
+    
+        <div class="social">
+            <img class="social-icons" src="icons/icon-facebook.svg" alt="">
+                <div class="google-content"> 
+                    <p class="social-header">Facebook</p>
+                    <p class="social-stats" id="stats">8,739</p>
+                </div>
+        </div>
+        <div class="social">
+            <img class="social-icons" src="icons/icon-google-plus.svg" alt="">
+                <div class="google-content">    
+                    <p class="social-header">Google+</p>
+                    <p class="social-stats" id="stats">2,530</p>
+                </div>   
+        </div>
+    </div>
 
-                </article>
-                <article id="card" class="card-google">
-                    <img class="social-icon" src="icons/icon-google-plus.svg" alt="Google Icon">
-                    <h5>Google+</h5>
-                    <p class="numbers">2,530</p>
-                </article>
-            </div>
-   </div>
+    <div class="chat"></div>
+        <div class="members">New Members</div>
+        <div class="activity">Recent Activity</div>
+        <div class="user">Message User</div>
+        <div class="settings">Settings</div>
+</div>
 
 
 
-
-
-
-
-
-
-   
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
-   <script src="js/app.js"></script>
+    <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+</script>
+    <!-- jQueryUI -->
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js">
+</script>
+    <!-- Chartjs -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+    <!-- JavaScript File -->
+<script src="js/app.js"></script>
 </body>
 </html>
