@@ -1,5 +1,4 @@
-$med: 768px;
-$lrg: 1024px;
+
 
 @mixin grid-one {
   display: grid;
@@ -16,7 +15,6 @@ $lrg: 1024px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: minmax(50px, auto);
-  // grid-auto-rows: repeat(auto-fill, minmax(auto, auto));
 }
 
 @mixin grid-three {
@@ -55,4 +53,10 @@ $lrg: 1024px;
   @media (min-width: #{$lrg}) {
     @content;
     }
+}
+
+@mixin sm {
+  @media(max-width: #{$med}) {
+    @content;
+  }
 }

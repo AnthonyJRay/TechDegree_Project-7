@@ -1,0 +1,27 @@
+.nav-icons {
+  height: 25px;
+  width: 25px;
+  margin: 10px;
+  padding-left: 5px;
+  &:hover {
+      border-left: 3px green solid;
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+  }
+  @include med {
+      margin-top: 40px;
+  }
+}
+
+#tab {
+  list-style-type: none;
+  font-family: $helvetica;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+  &:visited {
+    color: #555;
+  }
+}

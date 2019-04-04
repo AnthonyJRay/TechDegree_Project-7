@@ -2,19 +2,40 @@
 .avatar-name {
     margin: 0 5px;
     color: rgba(240, 238, 238, 0.89);
-    font-family: 'Roboto', sans-serif;
+    font-family: $roboto;
 }
 
 p {
-    font-family: Helvetica, sans-serif;
+    text-align: center;
+    font-family: $helvetica;
     &.message {
-        font-family: Helvetica, sans-serif;
+        font-family: $helvetica;
         margin: 10px 20px;
     }
 }
 
+.header-h4 {
+    font-family: $roboto;
+    font-weight: 400;
+    margin-left: 15px;
+}
+
+.social-header {
+    font-family: $helvetica;
+    font-weight: 900;
+    color: rgba(86, 79, 192, 0.842)
+}
+
 .social-stats {
     font-size: 2.5em;
-    color: #555;
+    color: rgba(85, 85, 85, 0.85);
     margin: 0;
+}
+
+.chat {
+    margin: 0 20px;
+}
+
+ul {
+    padding: 0px;
 }

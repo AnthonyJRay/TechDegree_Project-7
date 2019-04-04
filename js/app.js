@@ -8,11 +8,6 @@ const settings = document.getElementById('settings');
 const navIcons = document.getElementsByClassName('nav-icons');
 const searchBar = document.getElementById('searchBar');
 
-document.addEventListener('click', function (e) {
-  if ( e.target.classList.contains('nav-icons')) {
-      e.target.style.borderLeft = "1px solid #000";
-  }
-}, false);
 
 // SEARCH BAR FUNCTION //
 function active(){
@@ -29,13 +24,6 @@ function active(){
       searchBar.placeholder = ''
     }
   }
-
-// TABS FUNCTION //
-$( function() {
-  $( "#tabs" ).tabs({
-    collapsible: true
-  });
-} );
 
 // ALERT BOX EVENT LISTENER //
 close.addEventListener("click", ()=> {
@@ -79,9 +67,12 @@ new Chart(document.getElementById("lineChart"), {
       ]
     },
     options: {
+      legend: {
+        display: false
+      },
       title: {
-        display: true,
-        text: 'TRAFFIC'
+        display: false,
+        text: 'TRAFFIC',
       }
     }
   });
@@ -145,3 +136,4 @@ new Chart(document.getElementById("doughtnutChart"), {
       }
     }
 });
+  

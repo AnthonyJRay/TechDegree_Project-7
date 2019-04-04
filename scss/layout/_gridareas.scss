@@ -1,4 +1,4 @@
-/* New Nest */
+
 .one {
     grid-area: one;
     display: flex;
@@ -18,60 +18,131 @@
 }
 .tabs {
     grid-area: tab1;
+    margin-bottom: 20px;
 }
 /* New Nest */
 .chart {
     grid-area: chart;
+    border-bottom: $border-grey;
+    margin: 20px;
+    padding-bottom: 20px;
 }
 .bar {
     grid-area: bar;
+    max-width: 90%;
+
 
 }.dough {
     grid-area: dough;
+    max-width: 90%;
 
 }
 /* New Nest */
 .card {
     grid-area: card;
+    border-top: $border-grey;
+    margin: 20px;
 
 }
 .twitter {
-    grid-area: twitter;
-    background-color: lightblue;   
+    grid-area: twitter;  
 }
 .facebook {
     grid-area: facebook;
-    background-color: slategrey;
 }
 .google {
     grid-area: google;
-    background-color: lightblue;
 }
-
 /* New Nest */
 .chat {
     grid-area: chat;
-    background-color: slategrey;
 }
-.members {
+.new-members {
     grid-area: members;
-    background-color: lightblue;
+    border-top: $border-grey;
+    border-bottom: $border-grey;
+    @include med {
+        border-right: $border-grey;
+    }
 }
-.activity {
+.recent-activity {
     grid-area: activity;
-    background-color: slategrey;
+    border-top: $border-grey;
+    border-bottom: $border-grey;
 }
 .user {
-    grid-area: user;
-    background-color: lightblue;  
+    grid-area: user; 
 }
 .settings {
     grid-area: settings;
-    background-color: slategrey;
 }
 
-.chart,
-.bar,
-.dough {
-    margin: 10px;
+p {
+    margin: 0;
+}
+.chat ul li {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.google-content {
+    padding-right: 40px;
+}
+
+.chat-name {
+    @include med {
+    text-align: start;
+    }
+}
+
+.activity-li {
+    @include sm {
+    margin-bottom: 20px;
+    }
+    @include med {
+        margin-left: 20px;
+    }
+}
+
+.comments {
+    @include med {
+        margin-left: 20px;
+    }
+}
+
+.hours {
+    margin-top: 10px;
+}
+
+.arrow {
+    align-self: center;
+}
+
+.fas {
+    color: rgba(86, 79, 192, 0.842);
+}
+
+.chat-heading {
+    margin-left: 20px
+}
+
+.message-user {
+    display: flex;
+    flex-direction: column;
+}
+
+.users-settings {
+    display: flex;
+    flex-direction: column;
+}
+
+.send-btn {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: rgba(86, 79, 192, 0.842);
+    color: #f4f4f4;
 }
