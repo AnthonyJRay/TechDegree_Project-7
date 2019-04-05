@@ -7,8 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
-    <link href="css/switcher.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
+    <link href="css/switcher.css" rel="stylesheet">
 </head>
 <body>
 
@@ -21,13 +21,34 @@
         <div class="avatar-div">
             <div class="bell-div">
             <img class="bell-icon" src="icons/icon-bell.svg" alt="Bell Notification Icon">
+            <div class="notification-drop">
+                <h4 class= "notifi-header">Notifications</h4>
+                <ul>
+                    <li>
+                        <div class="notifi-box1">
+                        <img class="notifi-img" src="images/member-1.jpg" alt="Picture of Victoria">
+                        <p class="notifi-p">Victoria Chambers commented on YourApp's SEO Tips</p>
+                        <span class="notifi-span">4 hours ago</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="notifi-box2">
+                            <img class= "notifi-img" src="images/member-2.jpg" alt="Picture of Dale">
+                            <p class="notifi-p">Dale Byrd liked the post Facebook's Changes for 2016</p>
+                            <span class="notifi-span">5 hours ago</span>
+                        </div>
+                        <div class="notifi-box3">
+                            <a id="seeAll" href="#newChat">See All</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
             <div id="notifications-dot">2</div>
         </div>
             <img class="avatar-img" src="images/avatar-img.jpg" alt="Avatar Image"> 
             <span class="avatar-name">Anthony Eriksen</span>
         </div>    
     </div>
-    <!-- Navigation Bar -->
     <nav class="two">
         <a href = "#"><img class="nav-icons" id="dashboard" src="icons/icon-dashboard.svg" alt="Dashboard Icon"></a>
         <a><img class="nav-icons" id="members" src="icons/icon-members.svg" alt="Members Icon"></a>
@@ -91,7 +112,7 @@
         </div>
     </div>
 
-    <div class="chat">
+    <div class="chat" id="newChat">
         <div class="new-members">
             <h4 class="chat-heading">NEW MEMBERS</h4>
                 <ul class="new-members-chat">
@@ -201,8 +222,8 @@
         <div class="users"> 
             <div class="message-user">
                 <h4 class="chat-heading">MESSAGE USER</h4>
-                <input type="text" placeholder=" Search for User">
-                <input type="text" placeholder=" Message for User">
+                <input id="search-user" type="text" placeholder=" Search for User">
+                <textarea id = "message-user" placeholder=" Message for User"></textarea>
                 <button class="send-btn">SEND</button>
             </div>
         </div>
@@ -210,33 +231,33 @@
         <div class="settings">
             <div class="users-settings">
                 <h4 class="chat-heading">SETTINGS</h4>
-                <p>Send Email Notifications<label class="switch-light switch-candy" onclick="">
-                        <input type="checkbox">
-                      
-                        <strong>
-                          Wireless
-                        </strong>
-                      
-                        <span>
-                          <span>Off</span>
-                          <span>On</span>
-                          <a></a>
-                        </span>
-                      </label></p>
-                <p>Set Profile to Public<label class="switch-light switch-candy" onclick="">
-                        <input type="checkbox">
-                      
-                        <strong>
-                          Wireless
-                        </strong>
-                      
-                        <span>
-                          <span>Off</span>
-                          <span>On</span>
-                          <a></a>
-                        </span>
-                      </label></p>
-                <select id="select-timezone" placeholder=" Select Timezone">
+
+                 
+                <div class="onoffswitch">
+                     <p class="p-switch">Send Email Notifications</p> 
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="onoffswitch-one" checked>
+                        <label class="onoffswitch-label" for="onoffswitch-one">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+           
+               
+                <div class="onoffswitch">
+                     <p class="p-switch">Set Profile to Public</p> 
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="onoffswitch-two" checked>
+                        <label class="onoffswitch-label" for="onoffswitch-two">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </div>
+                  
+                    
+                 <div class="select-menu"> 
+                    <i class="fas fa-angle-down" id = "downArrow"></i>
+                        <select id="select-timezone" placeholder=" Select Timezone">
+                    
+                   
                         <option disabled="" selected=""> Select Timezone</option>
                         <option timeZoneId="1" gmtAdjustment="GMT-12:00" useDaylightTime="0" value="-12">(GMT-12:00) International Date Line West</option>
                         <option timeZoneId="2" gmtAdjustment="GMT-11:00" useDaylightTime="0" value="-11">(GMT-11:00) Midway Island, Samoa</option>
@@ -320,9 +341,12 @@
                         <option timeZoneId="80" gmtAdjustment="GMT+12:00" useDaylightTime="1" value="12">(GMT+12:00) Auckland, Wellington</option>
                         <option timeZoneId="81" gmtAdjustment="GMT+12:00" useDaylightTime="0" value="12">(GMT+12:00) Fiji, Kamchatka, Marshall Is.</option>
                         <option timeZoneId="82" gmtAdjustment="GMT+13:00" useDaylightTime="0" value="13">(GMT+13:00) Nuku'alofa</option>
-                </select>
-                <button class="save-btn">SAVE</button>
-                <button class="cancel-btn">CANCEL</button>
+                </select> 
+            </div> 
+                <div class="btn-div">
+                    <button class="save-btn">SAVE</button>
+                    <button class="cancel-btn">CANCEL</button>
+                </div>
             </div>
         </div>
 
@@ -334,10 +358,11 @@
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous">
 </script>
+    <!-- Switcher jQuery -->
+    <script src="/js/jquery.switcher.min.js"></script>
     <!-- Chartjs -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
-    <!-- Switcher jQuery -->
-<script src="js/jquery.switcher.js"></script>
+
 <!-- JavaScript File -->
 <script src="/js/app.js"></script>
 </body>

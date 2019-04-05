@@ -127,3 +127,23 @@ h5 {
     }
   }
 }
+
+.onoffswitch {
+  display:flex;
+  justify-content: space-around;
+  text-align: start;
+}
+
+.p-switch {
+  width: 50%;
+  margin-bottom: 10px;
+  text-align: start;
+}
+
+.notifi-img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px 20px 10px;
+}
+

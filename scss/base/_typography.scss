@@ -39,3 +39,16 @@ p {
 ul {
     padding: 0px;
 }
+
+.notifi-box1,
+.notifi-box2 {
+    display: flex;
+    font-size: 12px;
+    font-family: $helvetica;
+}
+
+.notifi-p,
+.notifi-span {
+    margin-top: 10px;
+    color: rgba(85, 85, 85, 0.85);
+}

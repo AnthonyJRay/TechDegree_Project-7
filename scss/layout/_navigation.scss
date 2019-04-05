@@ -25,3 +25,36 @@ a {
     color: #555;
   }
 }
+
+#close {
+  color: #f4f4f4;
+}
+
+.notification-drop {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: $border-grey;
+  border-radius: 3px;
+  width: 300px;
+  right: 325px;
+  top: 40px;
+}
+
+.notifi-header {
+  margin: 10px;
+  padding-bottom: 10px;
+  border-bottom: $border-grey;
+}
+
+.notifi-box3 {
+  text-align:center;
+  border-top: $border-grey;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+
+#seeAll {
+  border-bottom: $border-grey;
+  color: rgba(86, 79, 192, 0.842);
+}

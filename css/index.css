@@ -398,6 +398,12 @@ template {
   max-width: 90%;
 }
 
+@media (min-width: 768px) {
+  .bar {
+    margin-left: 20px;
+  }
+}
+
 .dough {
   grid-area: dough;
   max-width: 90%;
@@ -459,10 +465,14 @@ template {
   border-bottom: 1px #606a74 solid;
 }
 
-.user {
-  -ms-grid-row: 12;
-  -ms-grid-column: 1;
-  grid-area: user;
+.users {
+  grid-area: users;
+}
+
+@media (min-width: 768px) {
+  .users {
+    border-right: 1px #606a74 solid;
+  }
 }
 
 .settings {
@@ -544,6 +554,8 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-width: 90%;
+  margin: auto;
 }
 
 .users-settings {
@@ -554,6 +566,8 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-width: 90%;
+  margin: auto;
 }
 
 .send-btn {
@@ -563,6 +577,94 @@ p {
   border-style: none;
   background-color: rgba(86, 79, 192, 0.842);
   color: #f4f4f4;
+}
+
+.save-btn {
+  padding: 10px;
+  border-radius: 5px;
+  border-style: none;
+  background-color: rgba(86, 79, 192, 0.842);
+  color: #f4f4f4;
+  margin-top: 10px;
+  width: 47%;
+  margin-right: 20px;
+}
+
+.cancel-btn {
+  padding: 10px;
+  border-radius: 5px;
+  border-style: none;
+  width: 47%;
+  margin-top: 10px;
+  color: #f4f4f4;
+}
+
+#search-user {
+  border-radius: 5px;
+  border: 1px #606a74 solid;
+  padding: 5px;
+}
+
+#message-user {
+  border: 1px #606a74 solid;
+  border-radius: 5px;
+  height: 100px;
+  margin-top: 10px;
+}
+
+#select-timezone {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 1px #606a74 solid;
+  border-right: none;
+  width: 90%;
+  margin-top: 52px;
+}
+
+.select-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#downArrow {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border: 1px #606a74 solid;
+  padding: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-left: none;
+  margin-top: 52px;
+}
+
+.btn-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+h4 {
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-family: Helvetica, sans-serif;
 }
 
 .container {
@@ -636,6 +738,7 @@ p {
   border: 1px #606a74 solid;
   border-radius: 3px;
   margin: 20px auto;
+  padding: 20px 0;
 }
 
 @media (max-width: 768px) {
@@ -718,6 +821,39 @@ a {
 
 a:visited {
   color: #555;
+}
+
+#close {
+  color: #f4f4f4;
+}
+
+.notification-drop {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px #606a74 solid;
+  border-radius: 3px;
+  width: 300px;
+  right: 325px;
+  top: 40px;
+}
+
+.notifi-header {
+  margin: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px #606a74 solid;
+}
+
+.notifi-box3 {
+  text-align: center;
+  border-top: 1px #606a74 solid;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+
+#seeAll {
+  border-bottom: 1px #606a74 solid;
+  color: rgba(86, 79, 192, 0.842);
 }
 
 .avatar-div {
@@ -938,6 +1074,28 @@ h5 {
   }
 }
 
+.onoffswitch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: start;
+}
+
+.p-switch {
+  width: 50%;
+  margin-bottom: 10px;
+  text-align: start;
+}
+
+.notifi-img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin: 0 5px 20px 10px;
+}
+
 .msgBox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1059,5 +1217,20 @@ p.message {
 
 ul {
   padding: 0px;
+}
+
+.notifi-box1,
+.notifi-box2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 12px;
+  font-family: Helvetica, sans-serif;
+}
+
+.notifi-p,
+.notifi-span {
+  margin-top: 10px;
+  color: rgba(85, 85, 85, 0.85);
 }
 /*# sourceMappingURL=index.css.map */

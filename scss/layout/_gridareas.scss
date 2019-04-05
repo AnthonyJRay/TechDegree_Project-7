@@ -30,9 +30,11 @@
 .bar {
     grid-area: bar;
     max-width: 90%;
-
-
-}.dough {
+    @include med {
+        margin-left: 20px;
+    }
+}
+.dough {
     grid-area: dough;
     max-width: 90%;
 
@@ -70,8 +72,11 @@
     border-top: $border-grey;
     border-bottom: $border-grey;
 }
-.user {
-    grid-area: user; 
+.users {
+    grid-area: users;
+    @include med {
+    border-right: $border-grey;
+    }
 }
 .settings {
     grid-area: settings;
@@ -131,11 +136,15 @@ p {
 .message-user {
     display: flex;
     flex-direction: column;
+    max-width: 90%;
+    margin: auto;
 }
 
 .users-settings {
     display: flex;
     flex-direction: column;
+    max-width: 90%;
+    margin: auto;
 }
 
 .send-btn {
@@ -145,4 +154,76 @@ p {
     border-style: none;
     background-color: rgba(86, 79, 192, 0.842);
     color: #f4f4f4;
+}
+
+.save-btn {
+    padding: 10px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: rgba(86, 79, 192, 0.842);
+    color: #f4f4f4;
+    margin-top: 10px;
+    width: 47%;
+    margin-right: 20px;
+}
+
+.cancel-btn {
+    padding: 10px;
+    border-radius: 5px;
+    border-style: none;
+    width: 47%;
+    margin-top: 10px;
+    color: #f4f4f4;
+}
+
+#search-user{
+    border-radius: 5px;
+    border: $border-grey;
+    padding: 5px;
+}
+
+#message-user {
+    border: $border-grey;
+    border-radius: 5px;
+    height: 100px;
+    margin-top: 10px;
+}
+
+#select-timezone {
+    appearance: none;
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: $border-grey;
+    border-right: none;
+    width: 90%;
+    margin-top: 52px;
+}
+
+.select-menu {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+#downArrow {
+    align-self: center;
+    border: $border-grey;
+    padding: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: none;
+    margin-top: 52px;
+}
+
+.btn-div {
+    display: flex;
+    justify-content: center;
+}
+
+h4 {
+    font-family: $roboto;
+}
+p {
+    font-family: $helvetica;
 }

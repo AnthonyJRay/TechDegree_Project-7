@@ -1,12 +1,34 @@
 const msgBox = document.querySelector(".msgBox");
 const close = document.getElementById("close");
-// const stats = document.getElementById('stats').innerHTML;
+const dropDown = document.querySelector('.notification-drop');
+const bell = document.querySelector('.bell-icon');
 const dashboard = document.getElementById('dashboard');
 const members = document.getElementById('members');
 const visitors = document.getElementById('visitors');
 const settings = document.getElementById('settings');
 const navIcons = document.getElementsByClassName('nav-icons');
 const searchBar = document.getElementById('searchBar');
+const searchUser = document.querySelector('#search-user');
+const msgUser = document.querySelector('#message-user');
+const sendBtn = document.querySelector('.send-btn');
+
+sendBtn.addEventListener('click', () => {
+  if (searchUser.value === '' || msgUser.value === '') {
+    alert('Please input a message');
+  } else {
+    confirm('Message was sent!');
+  }
+})
+
+
+
+bell.addEventListener('click', () => {
+  if (dropDown.style.display === 'none') {
+    dropDown.style.display = 'block';
+  } else {
+    dropDown.style.display = 'none';
+  } 
+});
 
 
 // SEARCH BAR FUNCTION //
@@ -137,3 +159,6 @@ new Chart(document.getElementById("doughtnutChart"), {
     }
 });
   
+$(function(){
+  $.switcher('input[type=checkbox]');
+});
