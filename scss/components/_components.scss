@@ -56,3 +56,16 @@ input[type="submit"] {
     font-size: 13px;
     font-weight: 600;
 }
+
+.traffic-btn {
+    border-radius: 5px;
+    border-color: rgba(86, 79, 192, 0.842);;
+    margin: 10px 10px 0 0;
+    width: 75px;
+    background-color: rgba(3, 14, 107, 0.336); 
+    color: #f4f4f4;
+    
+    &:hover {
+       transform: scale(1.1);
+    }
+}

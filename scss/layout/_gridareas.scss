@@ -13,6 +13,18 @@
     justify-content: space-around;
     align-items: center;
 }
+
+.traffic-chart-btns {
+    grid-area: traffic-btns;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    @include med {
+        justify-content: flex-end;
+        margin-right: 50px;
+    }
+}
+
 .three {
     grid-area: three;
 }
@@ -26,6 +38,7 @@
     border-bottom: $border-grey;
     margin: 20px;
     padding-bottom: 20px;
+    width: 90%;
 }
 .bar {
     grid-area: bar;
@@ -39,6 +52,7 @@
     max-width: 90%;
 
 }
+
 /* New Nest */
 .card {
     grid-area: card;
@@ -219,11 +233,4 @@ p {
 .btn-div {
     display: flex;
     justify-content: center;
-}
-
-h4 {
-    font-family: $roboto;
-}
-p {
-    font-family: $helvetica;
 }

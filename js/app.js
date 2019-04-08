@@ -50,8 +50,10 @@ function active(){
 // ALERT BOX EVENT LISTENER //
 close.addEventListener("click", ()=> {
 	msgBox.style.display = "none";
-	})
+  });
 
+
+  
 // CHART.js LINE CHART //
 new Chart(document.getElementById("lineChart"), {
     type: 'line',

@@ -47,6 +47,7 @@
             @include lrg {
                 @include grid-tab;
                 grid-template-areas:
+                "traffic-btns traffic-btns traffic-btns traffic-btns"
                 "chart chart chart chart"
                 "bar bar dough dough"
             }

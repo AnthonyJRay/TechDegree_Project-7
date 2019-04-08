@@ -372,6 +372,26 @@ template {
           align-items: center;
 }
 
+.traffic-chart-btns {
+  grid-area: traffic-btns;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .traffic-chart-btns {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-right: 50px;
+  }
+}
+
 .three {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
@@ -391,6 +411,7 @@ template {
   border-bottom: 1px #606a74 solid;
   margin: 20px;
   padding-bottom: 20px;
+  width: 90%;
 }
 
 .bar {
@@ -659,14 +680,6 @@ p {
           justify-content: center;
 }
 
-h4 {
-  font-family: "Roboto", sans-serif;
-}
-
-p {
-  font-family: Helvetica, sans-serif;
-}
-
 .container {
   max-width: 1024px;
   margin: 0 auto;
@@ -710,7 +723,7 @@ p {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     -ms-grid-rows: minmax(50px, auto);
         grid-template-rows: minmax(50px, auto);
-        grid-template-areas: "chart chart chart chart" "bar bar dough dough";
+        grid-template-areas: "traffic-btns traffic-btns traffic-btns traffic-btns" "chart chart chart chart" "bar bar dough dough";
   }
 }
 
@@ -833,9 +846,16 @@ a:visited {
   background-color: white;
   border: 1px #606a74 solid;
   border-radius: 3px;
-  width: 300px;
-  right: 325px;
+  max-width: 290px;
+  margin-left: 50px;
+  right: 200px;
   top: 40px;
+}
+
+@media (min-width: 768px) {
+  .notification-drop {
+    right: 200px;
+  }
 }
 
 .notifi-header {
@@ -1176,6 +1196,20 @@ input[type="submit"] {
   font-weight: 600;
 }
 
+.traffic-btn {
+  border-radius: 5px;
+  border-color: rgba(86, 79, 192, 0.842);
+  margin: 10px 10px 0 0;
+  width: 75px;
+  background-color: rgba(3, 14, 107, 0.336);
+  color: #f4f4f4;
+}
+
+.traffic-btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .header-title,
 .avatar-name {
   margin: 0 5px;
@@ -1191,6 +1225,10 @@ p {
 p.message {
   font-family: Helvetica, sans-serif;
   margin: 10px 20px;
+}
+
+h4 {
+  font-family: "Roboto", sans-serif;
 }
 
 .header-h4 {
