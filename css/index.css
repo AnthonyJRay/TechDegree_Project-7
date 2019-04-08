@@ -402,14 +402,13 @@ template {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: tab1;
-  margin-bottom: 20px;
 }
 
 /* New Nest */
 .chart {
   grid-area: chart;
   border-bottom: 1px #606a74 solid;
-  margin: 20px;
+  margin: 20px auto;
   padding-bottom: 20px;
   width: 90%;
 }
@@ -417,17 +416,13 @@ template {
 .bar {
   grid-area: bar;
   max-width: 90%;
-}
-
-@media (min-width: 768px) {
-  .bar {
-    margin-left: 20px;
-  }
+  margin: auto;
 }
 
 .dough {
   grid-area: dough;
   max-width: 90%;
+  margin: auto;
 }
 
 /* New Nest */
@@ -708,7 +703,7 @@ p {
   .container {
     display: -ms-grid;
     display: grid;
-    grid-auto-rows: repeat(auto-fill, minmax(auto, auto));
+    grid-auto-rows: minmax(auto, auto);
     -ms-grid-columns: 50px 1fr 1fr 1fr 1fr;
         grid-template-columns: 50px 1fr 1fr 1fr 1fr;
         grid-template-areas: "one one one one one" "two three three three three" "two tab1 tab1 tab1 tab1" "two card card card card" "two chat chat chat chat" "two members members activity activity" "two user user settings settings";

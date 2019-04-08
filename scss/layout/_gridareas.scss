@@ -30,27 +30,24 @@
 }
 .tabs {
     grid-area: tab1;
-    margin-bottom: 20px;
 }
 /* New Nest */
 .chart {
     grid-area: chart;
     border-bottom: $border-grey;
-    margin: 20px;
+    margin: 20px auto;
     padding-bottom: 20px;
     width: 90%;
 }
 .bar {
     grid-area: bar;
     max-width: 90%;
-    @include med {
-        margin-left: 20px;
-    }
+    margin: auto;
 }
 .dough {
     grid-area: dough;
     max-width: 90%;
-
+    margin: auto;
 }
 
 /* New Nest */
