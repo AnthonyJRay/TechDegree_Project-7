@@ -516,8 +516,16 @@ p {
           align-items: center;
 }
 
-.google-content {
-  padding-right: 40px;
+@media (min-width: 768px) {
+  .google-content {
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .google-content {
+    padding-right: 20px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1002,17 +1010,22 @@ a:visited {
   margin-right: 5px;
 }
 
+.social-svg {
+  text-align: center;
+}
+
 .social-icons {
   max-width: 40px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: end;
-      justify-self: end;
-  margin-right: 10px;
+  max-height: 40px;
   padding: 10px;
   background-color: rgba(86, 79, 192, 0.842);
   border-radius: 100%;
+}
+
+@media (max-width: 768px) {
+  .social-icons {
+    margin-left: -70px;
+  }
 }
 
 .chat-avatar {

@@ -62,14 +62,20 @@
     margin-right: 5px;
 }
 
+.social-svg {
+  text-align: center;
+}
+
 .social-icons {
     max-width: 40px;
-    align-self: center;
-    justify-self: end;
-    margin-right: 10px;
+    max-height: 40px;
+    
     padding: 10px;
     background-color: rgba(86, 79, 192, 0.842);
     border-radius: 100%;
+    @include sm {
+      margin-left: -70px;
+    }
 }
 
 .chat-avatar {

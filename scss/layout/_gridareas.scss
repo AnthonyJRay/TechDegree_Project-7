@@ -104,7 +104,12 @@ p {
 }
 
 .google-content {
-    padding-right: 40px;
+    @include med {
+    padding-right: 20px;
+    }
+    @include lrg {
+        padding-right: 20px;
+    }
 }
 
 .chat-name {
