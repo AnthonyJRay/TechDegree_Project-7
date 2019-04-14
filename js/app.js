@@ -161,6 +161,8 @@ new Chart(document.getElementById("doughtnutChart"), {
     }
 });
   
-$(function(){
-  $.switcher('input[type=checkbox]');
+
+$('.toggle').toggles({
+  width: 75,
+  height: 25
 });

@@ -69,3 +69,12 @@ input[type="submit"] {
        transform: scale(1.1);
     }
 }
+
+.settings-div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.toggle {
+    margin-top: 15px;
+}

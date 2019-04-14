@@ -7,8 +7,8 @@
     <title>WebApp</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans%7CRoboto" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/jquery-toggles/css/toggles-full.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="TechDegree_Project-7/node_modules/jquery.switcher/dist/switcher.min.css">
 </head>
 <body>
 
@@ -353,26 +353,27 @@
             <div class="users-settings">
                 <h4 class="chat-heading">SETTINGS</h4>
 
-                 
-                <div class="onoffswitch">
-                     <p class="p-switch">Send Email Notifications</p> 
-                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="onoffswitch-one" checked>
-                        <label class="onoffswitch-label" for="onoffswitch-one">
-                            <span class="onoffswitch-inner"></span>
-                            <span class="onoffswitch-switch"></span>
+                <div class="settings-div">
+                 <p class="p-switch">Send Email Notifications</p> 
+                <div class="toggle toggle-light">                    
+                        <input type="checkbox" name="toggle toggle-light" class="toggle toggle-light-checkbox" id="toggle toggle-light-one" checked>
+                        <label class="onoffswitch-label" for="toggle toggle-light-one">
+                            <span class="toggle toggle-light-inner"></span>
+                            <span class="toggle toggle-light-switch"></span>
                         </label>
                     </div>
-           
-               
-                <div class="onoffswitch">
-                     <p class="p-switch">Set Profile to Public</p> 
-                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="onoffswitch-two" checked>
-                        <label class="onoffswitch-label" for="onoffswitch-two">
-                            <span class="onoffswitch-inner"></span>
-                            <span class="onoffswitch-switch"></span>
+                </div>
+
+                <div class="settings-div">
+                <p class="p-switch">Set Profile to Public</p> 
+                <div class="toggle toggle-light">
+                        <input type="checkbox" name="toggle toggle-light" class="toggle toggle-light-checkbox" id="toggle toggle-light-two" checked>
+                        <label class="toggle toggle-light-label" for="toggle toggle-light-two">
+                            <span class="toggle toggle-light-inner"></span>
+                            <span class="toggle toggle-light-switch"></span>
                         </label>
                     </div>
-                  
+                  </div>
                     
                  <div class="select-menu"> 
                     <i class="fas fa-angle-down" id="downArrow"></i>
@@ -476,10 +477,10 @@
 
     <!-- jQuery -->
 <script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <!-- Switcher jQuery -->
-<script src= "node_modules/jquery.switcher/dist/switcher.min.js"></script>
     <!-- Chartjs -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js" integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+   <!-- Switcher jQuery -->
+<script src= "node_modules/jquery-toggles/toggles.min.js"></script>
 <!-- JavaScript File -->
 <script src= "/js/app.js"></script>
 </body>
